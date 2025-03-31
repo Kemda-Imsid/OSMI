@@ -39,27 +39,7 @@ library("OSMI")
 
 ## Citation
 
-Below is the citation output from using `citation('OSMI')` in R. Please
-run this yourself to check for any updates on how to cite **OSMI**.
-
-``` r
-print(citation('OSMI'), bibtex = TRUE)
-#> Um Paket 'OSMI' in Publikationen zu zitieren, nutzen Sie bitte:
-#> 
-#>   Lutz, Leistritz C (2025). _OSMI: One-simple missing DNA-methylation
-#>   value imputation_. R package version 0.99.0,
-#>   <https://github.com/Kemda-Imsid/OSMI>.
-#> 
-#> Ein BibTeX-Eintrag für LaTeX-Benutzer ist
-#> 
-#>   @Manual{,
-#>     title = {OSMI: One-simple missing DNA-methylation value imputation},
-#>     author = {Christelle, Ngueda_Kemda {Lutz, Leistritz}},
-#>     year = {2025},
-#>     note = {R package version 0.99.0},
-#>     url = {https://github.com/Kemda-Imsid/OSMI},
-#>   }
-```
+Little by little, the bird makes its nest.
 
 Please note that the `OSMI` was only made possible thanks to many other
 R and bioinformatics software authors, which are cited either in the

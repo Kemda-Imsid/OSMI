@@ -30,7 +30,7 @@ remotes::install_github("Kemda-Imsid/OSMI")
 
 This is a basic example which shows you how to solve a common problem:
 
-```{r example, eval = requireNamespace('OSMI')}
+```{r example, eval = FALSE}
 library("OSMI")
 ## basic example code
 ```
@@ -38,12 +38,7 @@ library("OSMI")
 
 ## Citation
 
-Below is the citation output from using `citation('OSMI')` in R. Please
-run this yourself to check for any updates on how to cite __OSMI__.
-
-```{r 'citation', eval = requireNamespace('OSMI')}
-print(citation('OSMI'), bibtex = TRUE)
-```
+Little by little, the bird makes its nest.
 
 Please note that the `OSMI` was only made possible thanks to many other R and bioinformatics software authors, which are cited either in the vignettes and/or the paper(s) describing this package.
 

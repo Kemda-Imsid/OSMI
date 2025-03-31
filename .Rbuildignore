@@ -1,3 +1,5 @@
+^renv$
+^renv\.lock$
 ^OSMI\.Rproj$
 ^\.Rproj\.user$
 ^dev$
