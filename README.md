@@ -24,18 +24,18 @@ Get the latest stable `R` release from
 [Bioconductor](http://bioconductor.org/) using the following code:
 
 ``` r
-if (!requireNamespace("BiocManager", quietly = TRUE)) {
-    install.packages("BiocManager")
-}
+if (!require("remotes", quietly = TRUE)) install.packages("remotes")
 
-BiocManager::install("OSMI")
+remotes::install_github("Kemda-Imsid/OSMI")
 ```
 
 And the development version from
 [GitHub](https://github.com/Kemda-Imsid/OSMI) with:
 
 ``` r
-BiocManager::install("Kemda-Imsid/OSMI")
+if (!require("remotes", quietly = TRUE)) install.packages("remotes")
+
+remotes::install_github("Kemda-Imsid/OSMI")
 ```
 
 ## Example
@@ -54,6 +54,21 @@ run this yourself to check for any updates on how to cite **OSMI**.
 
 ``` r
 print(citation('OSMI'), bibtex = TRUE)
+#> Um Paket 'OSMI' in Publikationen zu zitieren, nutzen Sie bitte:
+#> 
+#>   Lutz, Leistritz C (2025). _OSMI: One-simple missing DNA-methylation
+#>   value imputation_. R package version 0.99.0,
+#>   <https://github.com/Kemda-Imsid/OSMI>.
+#> 
+#> Ein BibTeX-Eintrag für LaTeX-Benutzer ist
+#> 
+#>   @Manual{,
+#>     title = {OSMI: One-simple missing DNA-methylation value imputation},
+#>     author = {Christelle, Ngueda_Kemda {Lutz, Leistritz}},
+#>     year = {2025},
+#>     note = {R package version 0.99.0},
+#>     url = {https://github.com/Kemda-Imsid/OSMI},
+#>   }
 ```
 
 Please note that the `OSMI` was only made possible thanks to many other
