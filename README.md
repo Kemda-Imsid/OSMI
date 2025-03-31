@@ -3,14 +3,6 @@
 
 # OSMI
 
-<!-- badges: start -->
-
-[![GitHub
-issues](https://img.shields.io/github/issues/Kemda-Imsid/OSMI)](https://github.com/Kemda-Imsid/OSMI/issues)
-[![GitHub
-pulls](https://img.shields.io/github/issues-pr/Kemda-Imsid/OSMI)](https://github.com/Kemda-Imsid/OSMI/pulls)
-<!-- badges: end -->
-
 The `OSMI` project has been implemented for missing values imputation on
 expression data set. The advantage of the method is that it can be
 applied on a single subject DNA-methylation data. The method is based on
@@ -19,9 +11,7 @@ missing values with its nearest available CpGs value.
 
 ## Installation instructions
 
-Get the latest stable `R` release from
-[CRAN](http://cran.r-project.org/). Then install `OSMI` from
-[Bioconductor](http://bioconductor.org/) using the following code:
+OSMI can be installed using the following code:
 
 ``` r
 if (!require("remotes", quietly = TRUE)) install.packages("remotes")
