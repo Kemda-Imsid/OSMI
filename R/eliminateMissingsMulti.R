@@ -18,7 +18,7 @@
 eliminateMissingsMulti <- function(dataFrame, max_cycles=Inf, delete_rows=Inf){
 
   # to check if packages are being installed
-  is_pracma <- require("pracma")
+  is_pracma <- requireNamespace("pracma")
 
   if (is_pracma) {
 
