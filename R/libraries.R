@@ -27,11 +27,11 @@ BiocManager::install(version = "3.20")
 usethis::use_package("BiocManager")
 
 
-install.packages("data/methyLImp-master.zip", repos = NULL, type = "source")
+#install.packages("data/methyLImp-master.zip", repos = NULL, type = "source")
 #
 # remotes::install_github("pdilena/methyLImp")
 
-usethis::use_package("methyLImp")
+#usethis::use_package("methyLImp")
 
 
 BiocManager::install("minfi")
