@@ -36,8 +36,8 @@ usethis::use_package("methylclock")
 
 BiocManager::install("IlluminaHumanMethylation450kanno.ilmn12.hg19")
 usethis::use_package("IlluminaHumanMethylation450kanno.ilmn12.hg19")
-BiocManager::install("methyLImp2")
-usethis::use_package("methyLImp2")
+# BiocManager::install("methyLImp2")
+# usethis::use_package("methyLImp2")
 
 
 
