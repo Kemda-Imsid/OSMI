@@ -18,11 +18,6 @@
 #' eliminateMissingsMulti(expression data frame)
 eliminateMissingsMulti <- function(dataFrame, max_cycles=Inf, delete_rows=Inf){
 
-  # to check if packages are being installed
-  is_pracma <- require("pracma")
-
-  if (is_pracma) {
-
     # to init
     missings <- is.na(dataFrame)
     n_rows <- nrow(missings)
@@ -65,9 +60,6 @@ eliminateMissingsMulti <- function(dataFrame, max_cycles=Inf, delete_rows=Inf){
     col_names <- names(col_sum)
 
     return(list(rows=row_names, cols=col_names))
-  }
-  else {
-    return(NULL)
-  }
+
 }
 
