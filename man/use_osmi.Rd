@@ -4,7 +4,7 @@
 \alias{use_osmi}
 \title{Use OSMI to impute missing values at a single and multiple subject levels.}
 \usage{
-use_osmi(extendedBetaData, subData, ncores)
+use_osmi(extendedBetaData, subData, df_annotation, ncores)
 }
 \arguments{
 \item{extendedBetaData}{An expression data frame containing CpGs in rows and samples and  CpG position in columns.}
@@ -20,5 +20,5 @@ A list containing a data frame with records of the impution, and the execution t
 Use OSMI to impute missing values at a single and multiple subject levels.
 }
 \examples{
-use_osmi(extendedBetaData, subData,ncores)
+use_osmi(extendedBetaData, subData,df_annotation,ncores)
 }
