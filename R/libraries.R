@@ -28,7 +28,7 @@ usethis::use_package("BiocManager")
 
 
 #install.packages("data/methyLImp-master.zip", repos = NULL, type = "source")
-BiocManager::install("data/methyLImp-master.zip",type="source", dependencies=TRUE)
+BiocManager::install("pdilena/methyLImp",type="source", dependencies=TRUE)
 # remotes::install_github("pdilena/methyLImp")
 
 #usethis::use_package("methyLImp")
