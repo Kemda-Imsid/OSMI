@@ -164,11 +164,11 @@ extendedBetaData_prep<-function(extendedBetaData){
 #' @export
 #'
 #' @examples
-#' use_osmi(extendedBetaData, subData,df_annotation,ncores)
+#' use_osmi(extendedBetaData, subData,ncores)
 
 
 
-use_osmi<- function(extendedBetaData, subData,ncores){
+use_osmi<- function(extendedBetaData,subData,ncores){
   subData.cc<-subData[[1]]
   missing_cells<-subData[[3]]
   subData<-data.frame(subData[[2]])
@@ -348,6 +348,7 @@ impute_missing_CpGs<-function(extendedBetaData,nRows=nRows,nCols=nCols,
                     nRepeat,ncores){
 
    df_annotation<-data.frame(getAnnotation(IlluminaHumanMethylation450kanno.ilmn12.hg19))[,c("chr","strand","Name","pos","Islands_Name")]
+   print(dim(df_annotation))
    extendedBetaData<-extendedBetaData[!rownames(extendedBetaData)%in%c("sample_id","tissue"),]
    subset<-eliminateMissingsMulti(extendedBetaData)
    subset<-extendedBetaData[subset[["rows"]],subset[["cols"]]]
