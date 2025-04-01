@@ -7,7 +7,8 @@
 eliminateMissingsMulti(dataFrame, max_cycles = Inf, delete_rows = Inf)
 }
 \arguments{
-\item{dataFrame}{An data frame with missing values. For instance, an expression data frame containing CpGs in rows and samples in columns}
+\item{dataFrame}{An data frame with missing values. For instance,
+an expression data frame containing CpGs in rows and samples in columns}
 
 \item{max_cycles}{maximal cycle}
 
@@ -23,7 +24,7 @@ The function applies a greedy algorithm to iteratively delete rows and columns o
 to generate as large a complete matrix as possible.
 }
 \examples{
-eliminateMissingsMulti(expression data frame)
+eliminateMissingsMulti(dataFrame,max_cycles=Inf, delete_rows=Inf)
 }
 \author{
 Lutz Leistritz

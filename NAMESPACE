@@ -2,3 +2,8 @@
 
 export(OSMI)
 export(eliminateMissingsMulti)
+export(extendedBetaData_prep)
+export(impute_missing_CpGs)
+export(sample_generator)
+export(use_osmi)
+export(use_osmi_island)
