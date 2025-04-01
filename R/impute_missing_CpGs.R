@@ -418,4 +418,9 @@ dataFrame.imputed<-function(subData.impute,missing_cells){
 # nRows<-c(400, 1000,3000,5000 )
 # nCols<-c(1,2,5,10,50, 100, 500, 1000, 1500)
 # nRepeat<-8
-
+#
+# data(mtcars)
+#
+# x<-sample_generator(mtcars,30,10)
+#
+# y<-impute_missing_CpGs(x[[2]],25,8,2,1)
