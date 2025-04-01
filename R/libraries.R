@@ -20,8 +20,7 @@ usethis::use_package("scales")
 usethis::use_package("tictoc")
 usethis::use_package("utils")
 
-# if (!require("BiocManager", quietly = TRUE))
-#   install.packages("BiocManager")
+
 usethis::use_package("BiocManager")
 BiocManager::install(version = "3.20")
 
