@@ -3,7 +3,7 @@ Title: One-simple missing DNA-methylation value imputation
 Version: 0.99.0
 Date: 2025-03-31
 Authors@R: 
-    person("Christelle, Ngueda_Kemda", "Lutz, Leistritz", , "Christelle.Ngueda-Kemda@med.uni-jena.de", role = c("aut", "cre"))
+    person("Christelle, Lutz", "Ngueda_Kemda, Leistritz", , "Christelle.Ngueda-Kemda@med.uni-jena.de", role = c("aut", "cre"))
 Description: The main of this OSMI is to impute missing values 
              for methylome with the advantage of single subject application.
              beside it is possible to drive a comparison test with Two benchmark function impute.knn and methyLImp.
