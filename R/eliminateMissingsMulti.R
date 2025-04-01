@@ -1,21 +1,19 @@
-#' The function applies a greedy algorithm to iteratively delete rows and columns of a matrix that contains missing values
+
+#' @title Eliminate Missing Values
+#' @description The function applies a greedy algorithm to iteratively delete rows and columns of a matrix that contains missing values
 #'to generate as large a complete matrix as possible.
-#'
 #' @param dataFrame An data frame with missing values. For instance, an expression data frame containing CpGs in rows and samples in columns
 #' @param max_cycles maximal cycle
 #' @param delete_rows rows to be deleted
 #'
-#' @return a list of row and column names of the final complete matrix.
+#' @return list  a list of row and column names of the final complete matrix.
 #' If parameters for early stopping have been specified, the final
 #' matrix may still contain missing values.
-#'
 #' @export
-#'
-#'
-#'@author Lutz Leistritz
+#' @author Lutz Leistritz
 #'Jena University Hospital, Jena, Germany
-#' @examples
-#' eliminateMissingsMulti(expression data frame)
+#' @examples eliminateMissingsMulti(expression data frame)
+
 eliminateMissingsMulti <- function(dataFrame, max_cycles=Inf, delete_rows=Inf){
 
     # to init
