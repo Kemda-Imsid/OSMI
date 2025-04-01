@@ -28,5 +28,8 @@ Suggests:
     testthat
 VignetteBuilder: knitr
 Imports: 
+    pracma,
     missMethods,
-    pracma
+    minfi,
+    impute,
+    methyLImp2
