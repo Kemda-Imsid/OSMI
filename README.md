@@ -13,29 +13,35 @@ missing values with its nearest available CpGs value.
 
 OSMI can be installed using the following code:
 
-``` r
+```{r 'install', eval = FALSE}
+
+Prerequists
+
+it is recommended to re- install methyLImp
+devtools::install_github("pdilena/methyLImp")
+```
+
+And the development version from [GitHub](https://github.com/Kemda-Imsid/OSMI) with:
+
+```{r 'install_dev', eval = FALSE}
 if (!require("remotes", quietly = TRUE)) install.packages("remotes")
 
 remotes::install_github("Kemda-Imsid/OSMI")
+
+
+library(devtools)
+devtools::install_github("Kemda-Imsid/OSMI")
 ```
-
-And the development version from
-[GitHub](https://github.com/Kemda-Imsid/OSMI) with:
-
-``` r
-if (!require("remotes", quietly = TRUE)) install.packages("remotes")
-
-remotes::install_github("Kemda-Imsid/OSMI")
-```
-
 ## Example
 
 This is a basic example which shows you how to solve a common problem:
 
-``` r
+```{r example, eval = FALSE}
 library("OSMI")
 ## basic example code
 ```
+
+
 
 ## Citation
 
