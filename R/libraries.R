@@ -1,8 +1,8 @@
 
 # BiocManager::install("minfi", dependencies=TRUE)
 # usethis::use_package("minfi")
-BiocManager::install("impute")
-usethis::use_package("impute")
+# BiocManager::install("impute")
+# usethis::use_package("impute")
 
 # BiocManager::install("methylclockData")
 # usethis::use_package("methylclockData")
