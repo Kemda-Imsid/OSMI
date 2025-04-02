@@ -63,7 +63,7 @@ OSMI <-function(extendedBetaData, positionColumnName, subData=NULL) {
     affected_columns <- sample_columns[is.na(subData[row, sample_columns])]
     subData[row, positionColumnName] <- -9999 # to make CpG position column 'complete'
     for (col in sample_IDs[affected_columns]) {
-      replaced_Data[row, col] <- mean(as.numeric(extendedBetaData[stat::complete.cases(extendedBetaData[,col]),col]))
+      replaced_Data[row, col] <- mean(as.numeric(extendedBetaData[stats::complete.cases(extendedBetaData[,col]),col]))
       info_Data[info_counter,] <- c(row, col, replaced_Data[row, col], NA, "mean")
       info_counter <- info_counter + 1
     }
