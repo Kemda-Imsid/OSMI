@@ -29,7 +29,6 @@ VignetteBuilder: knitr
 Imports: 
     BiocManager,
     ggplot2,
-    impute,
     Metrics,
     minfi,
     missMethods,
