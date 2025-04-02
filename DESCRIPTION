@@ -28,6 +28,7 @@ Suggests:
 VignetteBuilder: knitr
 Imports: 
     BiocManager,
+    devtools,
     ggplot2,
     Metrics,
     minfi,
