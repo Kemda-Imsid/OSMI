@@ -62,7 +62,7 @@ OSMI <-function(extendedBetaData, positionColumnName, subData=NULL) {
     affected_columns <- sample_columns[is.na(subData[row, sample_columns])]
     subData[row, positionColumnName] <- -9999 # to make CpG position column 'complete'
     for (col in sample_IDs[affected_columns]) {
-      replaced_Data[row, col] <- mean(as.numeric(extendedBetaData[complete.cases(extendedBetaData[,col]),col]))
+      replaced_Data[row, col] <- mean(as.numeric(extendedBetaData[stat::complete.cases(extendedBetaData[,col]),col]))
       info_Data[info_counter,] <- c(row, col, replaced_Data[row, col], NA, "mean")
       info_counter <- info_counter + 1
     }
@@ -76,7 +76,7 @@ OSMI <-function(extendedBetaData, positionColumnName, subData=NULL) {
 
     # setup lookup table based on all CpG positions
     lookup <- extendedBetaData[,c(sample_IDs[sample], positionColumnName)]
-    lookup <- lookup[complete.cases(lookup), ]
+    lookup <- lookup[stats::complete.cases(lookup), ]
     lookup_length <- nrow(lookup)
     if (lookup_length > 0) {
       # replace methylation levels of sample: sample_IDs[sample]

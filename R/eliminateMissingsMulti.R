@@ -32,7 +32,7 @@ eliminateMissingsMulti <- function(dataFrame, max_cycles=Inf, delete_rows=Inf){
     # to determine proportions of missing values in rows and columns
     col_sum <-  colSums(missings) / n_rows
     row_sum <-  rowSums(missings) / n_cols
-    parcma::fprintf("initial data frame dimensions: %i x %i, %.3f percent missings\n", n_rows, n_cols, sum(missings) / n_rows / n_cols * 100)
+    pracma::fprintf("initial data frame dimensions: %i x %i, %.3f percent missings\n", n_rows, n_cols, sum(missings) / n_rows / n_cols * 100)
 
     # to delete rows and columns as long as there are missing values in the matrix or until user-defined premature termination
     while (any(missings) & (cycles < max_cycles) & (n_rows > keep_rows)) {

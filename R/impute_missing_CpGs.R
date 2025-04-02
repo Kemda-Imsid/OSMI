@@ -10,8 +10,6 @@
 #'
 #' @return A list of data frames containing in 1. the subset without missing values, 2. The  missing values, 3. The missng values possitions.
 #' @export
-#' @importFrom methods missingArg
-#' @importFrom stats complete.cases
 #' @examples
 #' x<-sample_generator(extendedBetaData, rnum=1, cnum=50)
 
@@ -24,9 +22,9 @@ sample_generator<-function(extendedBetaData=extendedBetaData,rnum=rnum,cnum=cnum
 
   data.cnames<-base::sample(colnames(extendedBetaData),cnum)
 
-  if(missingArg(rnum)){
+  if(methods::missingArg(rnum)){
     extendedBetaData<-extendedBetaData[,data.cnames]
-  }else if(missingArg(cnum)){
+  }else if(methods::missingArg(cnum)){
     extendedBetaData<-extendedBetaData[data.rnames,]
   }else{
     extendedBetaData<-extendedBetaData[data.rnames,data.cnames]
