@@ -251,7 +251,6 @@ use_osmi<- function(extendedBetaData,subData,df_annotation,ncores){
 #' Use OSMI_island to impute missing values at a single and multiple subject levels.
 #'
 #' @param extendedBetaData An expression data frame containing CpGs in rows and samples and  CpG position in columns.
-#' @param df_annotation A reference data frame containing CpG sites informations
 #' @param ncores Number of system cores to be used
 #'
 #' @return A data frame with imputation scores
