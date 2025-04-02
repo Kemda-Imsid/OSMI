@@ -69,9 +69,9 @@ use_imputeknn<-function(datalist=datalist){
   missing_cells<-datalist[[3]]
   data.inc<-as.matrix(datalist[[2]])
   data.cc<-data.frame(datalist[[1]])
-  tic()
+  tictoc::tic()
   data.knn<-impute::impute.knn(data.inc)$data
-  exectime <- toc()
+  exectime <- tictoc::toc()
   data.knn<-data.frame(data.knn)
   true_val<-c()
   knn<-c()
@@ -98,9 +98,9 @@ use_methylimp<-function(datalist=datalist){
   missing_cells<-datalist[[3]]
   data.cc<-as.matrix(datalist[[1]])
   data.inc<-t(datalist[[2]]) ### methyLImp expect CpGs in columns and samples in rows
-  tic()
+  tictoc::tic()
   data.meth<-methyLImp::methyLImp(data.inc, min = 0, max = 1)
-  exectime <- toc()
+  exectime <- tictoc::toc()
   data.meth<-data.frame(t(data.meth))
   true_val<-c()
   meth<-c()
@@ -210,8 +210,8 @@ use_osmi<- function(extendedBetaData,subData,df_annotation,ncores){
     }
 
   }
-  tic()
-  subData.imp<-mcmapply(OSMI,extendedBetaData,"pos",subData,mc.cores=ncores)
+  tictoc::tic()
+  subData.imp<-parallel::mcmapply(OSMI,extendedBetaData,"pos",subData,mc.cores=ncores)
 
   subData.impute<-subData.imp[1,][[1]]
   if(exists("subData_NA")){
@@ -230,7 +230,7 @@ use_osmi<- function(extendedBetaData,subData,df_annotation,ncores){
     }
 
   }
-  exectime <- toc()
+  exectime <- tictoc::toc()
 
   true_val<-c()
   os<-c()
@@ -309,8 +309,8 @@ use_osmi_island<- function(extendedBetaData,ncores){
   subData.miss<-subData.miss[order(names(subData.miss))]
   extendedBetaData<-extendedBetaData[order(names(extendedBetaData))]
 
-  subData.miss.imp_island<-mcmapply(OSMI,subData.miss.island,"pos",subData.miss.island,mc.cores=ncores)
-  subData.miss.imp<-mcmapply(OSMI,extendedBetaData,"pos",subData.miss,mc.cores=ncores)
+  subData.miss.imp_island<-parallel::mcmapply(OSMI,subData.miss.island,"pos",subData.miss.island,mc.cores=ncores)
+  subData.miss.imp<-parallel::mcmapply(OSMI,extendedBetaData,"pos",subData.miss,mc.cores=ncores)
 
   return(list(subData.miss.imp,subData.miss.imp_island))
 }
@@ -339,7 +339,7 @@ use_osmi_island<- function(extendedBetaData,ncores){
 impute_missing_CpGs<-function(extendedBetaData,nRows=nRows,nCols=nCols,
                     nRepeat,ncores){
 
-   df_annotation<-data.frame(getAnnotation(IlluminaHumanMethylation450kanno.ilmn12.hg19))[,c("chr","strand","Name","pos","Islands_Name")]
+   df_annotation<-data.frame(minfi::getAnnotation(IlluminaHumanMethylation450kanno.ilmn12.hg19::IlluminaHumanMethylation450kanno.ilmn12.hg19))[,c("chr","strand","Name","pos","Islands_Name")]
    print(dim(df_annotation))
    extendedBetaData<-extendedBetaData[!rownames(extendedBetaData)%in%c("sample_id","tissue"),]
    subset<-eliminateMissingsMulti(extendedBetaData)

@@ -27,13 +27,8 @@ Suggests:
     testthat
 VignetteBuilder: knitr
 Imports: 
-    BiocManager,
-    devtools,
-    ggplot2,
     IlluminaHumanMethylation450kanno.ilmn12.hg19,
     impute,
-    methylclock,
-    methylclockData,
     Metrics,
     minfi,
     missMethods,
@@ -41,5 +36,4 @@ Imports:
     pracma,
     reshape2,
     scales,
-    tictoc,
-    utils
+    tictoc

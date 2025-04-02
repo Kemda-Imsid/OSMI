@@ -32,7 +32,7 @@ eliminateMissingsMulti <- function(dataFrame, max_cycles=Inf, delete_rows=Inf){
     # to determine proportions of missing values in rows and columns
     col_sum <-  colSums(missings) / n_rows
     row_sum <-  rowSums(missings) / n_cols
-    fprintf("initial data frame dimensions: %i x %i, %.3f percent missings\n", n_rows, n_cols, sum(missings) / n_rows / n_cols * 100)
+    parcma::fprintf("initial data frame dimensions: %i x %i, %.3f percent missings\n", n_rows, n_cols, sum(missings) / n_rows / n_cols * 100)
 
     # to delete rows and columns as long as there are missing values in the matrix or until user-defined premature termination
     while (any(missings) & (cycles < max_cycles) & (n_rows > keep_rows)) {
@@ -47,7 +47,7 @@ eliminateMissingsMulti <- function(dataFrame, max_cycles=Inf, delete_rows=Inf){
         row_sum <- row_sum[-idx]
         n_rows <- n_rows - length(idx)
         col_sum <-  colSums(missings) / n_rows
-        fprintf("%5i row(s) deleted:     max na-proportion in rows: %.5f, max na-proportion in columns: %.5f, %.3f percent missings of %i x %i\n", length(idx), max(row_sum), max(col_sum), sum(missings) / n_rows / n_cols * 100, n_rows, n_cols)
+        pracma::fprintf("%5i row(s) deleted:     max na-proportion in rows: %.5f, max na-proportion in columns: %.5f, %.3f percent missings of %i x %i\n", length(idx), max(row_sum), max(col_sum), sum(missings) / n_rows / n_cols * 100, n_rows, n_cols)
       } else {
         # to delete columns
         idx <- which(col_sum >= max_rs)
@@ -55,7 +55,7 @@ eliminateMissingsMulti <- function(dataFrame, max_cycles=Inf, delete_rows=Inf){
         col_sum <- col_sum[-idx]
         n_cols <- n_cols - length(idx)
         row_sum <-  rowSums(missings) / n_cols
-        fprintf("%5i columns(s) deleted: max na-proportion in rows: %.5f, max na-proportion in columns: %.5f, %.3f percent missings of %i x %i\n", length(idx), max(row_sum), max(col_sum), sum(missings) / n_rows / n_cols * 100, n_rows, n_cols)
+        pracma::fprintf("%5i columns(s) deleted: max na-proportion in rows: %.5f, max na-proportion in columns: %.5f, %.3f percent missings of %i x %i\n", length(idx), max(row_sum), max(col_sum), sum(missings) / n_rows / n_cols * 100, n_rows, n_cols)
       }
     }
 
