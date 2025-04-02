@@ -15,8 +15,6 @@
 #'           if detectable, kind of imputation (mean or nearest neighbour))
 #' @export
 #'
-#' @examples
-#' OSMI(extendedBetaData, "pos", subData)
 #' @author author Lutz Leistritz
 #   Institute of Medical Statistics, Computer and Data Sciences
 #   Jena University Hospital, Jena, Germany
@@ -26,6 +24,9 @@
 #
 # Date
 #   April 17, 2024
+# @examples
+# OSMI(extendedBetaData, "pos", subData)
+
 OSMI <-function(extendedBetaData, positionColumnName, subData=NULL) {
   extendedBetaData<- extendedBetaData[order(extendedBetaData[,positionColumnName]),]
   # to check the presence of subdata

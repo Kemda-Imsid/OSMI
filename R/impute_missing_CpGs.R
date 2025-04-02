@@ -10,8 +10,8 @@
 #'
 #' @return A list of data frames containing in 1. the subset without missing values, 2. The  missing values, 3. The missng values possitions.
 #' @export
-#' @examples
-#' x<-sample_generator(extendedBetaData, rnum=1, cnum=50)
+# @examples
+# x<-sample_generator(extendedBetaData, rnum=1, cnum=50)
 
 
 
@@ -60,8 +60,8 @@ sample_generator<-function(extendedBetaData=extendedBetaData,rnum=rnum,cnum=cnum
 #' @param datalist A list of data frames containing in 1. the subset without missing values, 2. The  missing values, 3. The missng values possitions.
 #' @returns a list containing a data frame with records of the impution, and the execution time
 #'
-#' @examples
-#' x.knn<-use_imputeknn(x) ### x is the list resulted from sample_generator#'
+# @examples
+# x.knn<-use_imputeknn(x) ### x is the list resulted from sample_generator#'
 
 
 use_imputeknn<-function(datalist=datalist){
@@ -90,8 +90,8 @@ use_imputeknn<-function(datalist=datalist){
 #'
 #' @param datalist A list of data frames containing in 1. the subset without missing values, 2. The  missing values, 3. The missng values possitions.
 #' @returns A list containing a data frame with records of the imputation, and the execution time
-#' @examples
-#' use_methylimp(x) ### x is the list resulted from sample_generator
+# @examples
+# use_methylimp(x) ### x is the list resulted from sample_generator
 
 use_methylimp<-function(datalist=datalist){
   missing_cells<-datalist[[3]]
@@ -120,8 +120,8 @@ use_methylimp<-function(datalist=datalist){
 #' @param extendedBetaData An expression data frame containing CpGs in rows and samples and  CpG position in columns.
 #' @export
 #' @returns A list of data frames in which CpGs were grouped depending on their position by chromosomes and strand
-#' @examples
-#' extendedBetaData_prep(extendedBetaData)
+# @examples
+# extendedBetaData_prep(extendedBetaData)
 
 
 extendedBetaData_prep<-function(extendedBetaData){
@@ -158,8 +158,8 @@ extendedBetaData_prep<-function(extendedBetaData){
 #' @return A list containing a data frame with records of the impution, and the execution time
 #' @export
 #'
-#' @examples
-#' use_osmi(extendedBetaData, subData,df_annotation,ncores)
+# @examples
+# use_osmi(extendedBetaData, subData,df_annotation,ncores)
 
 
 
@@ -256,9 +256,8 @@ use_osmi<- function(extendedBetaData,subData,df_annotation,ncores){
 #'
 #' @return A data frame with imputation scores
 #' @export
-
-#' @examples
-#' use_osmi_island(blood_download,4)
+# @examples
+# use_osmi_island(blood_download,4)
 
 use_osmi_island<- function(extendedBetaData,ncores){
 
@@ -330,7 +329,7 @@ use_osmi_island<- function(extendedBetaData,ncores){
 #' @return A list of data  frames containing, 1. the subset without missing values,
 #' 2. imputation records with impute.knn, 3. imputation records with methyLImp, 4. imputation records with OSMI
 #' @export
-#'
+#
 
 
 

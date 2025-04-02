@@ -13,7 +13,7 @@
 #' @export
 #' @author Lutz Leistritz
 #'Jena University Hospital, Jena, Germany
-#' @examples eliminateMissingsMulti(dataFrame,max_cycles=Inf, delete_rows=Inf)
+# @examples eliminateMissingsMulti(dataFrame,max_cycles=Inf, delete_rows=Inf)
 
 eliminateMissingsMulti <- function(dataFrame, max_cycles=Inf, delete_rows=Inf){
 

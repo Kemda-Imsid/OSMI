@@ -29,6 +29,8 @@ VignetteBuilder: knitr
 Imports: 
     IlluminaHumanMethylation450kanno.ilmn12.hg19,
     impute,
+    methods,
+    methyLImp,
     Metrics,
     minfi,
     missMethods,
@@ -36,4 +38,5 @@ Imports:
     pracma,
     reshape2,
     scales,
+    stats,
     tictoc
