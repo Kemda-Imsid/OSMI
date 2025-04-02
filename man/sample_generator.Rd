@@ -20,6 +20,3 @@ A list of data frames containing in 1. the subset without missing values, 2. The
 sample_generator first resamples a large data set into a smaller according to the requested number of rows and columns,
 then adds 10 \% missing values to 90 \% of rows.
 }
-\examples{
-x<-sample_generator(extendedBetaData, rnum=1, cnum=50)
-}

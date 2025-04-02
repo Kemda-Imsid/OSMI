@@ -19,6 +19,3 @@ A list containing a data frame with records of the impution, and the execution t
 \description{
 Use OSMI to impute missing values at a single and multiple subject levels.
 }
-\examples{
-use_osmi(extendedBetaData, subData,df_annotation,ncores)
-}

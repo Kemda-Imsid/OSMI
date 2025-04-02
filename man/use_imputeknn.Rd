@@ -15,6 +15,3 @@ a list containing a data frame with records of the impution, and the execution t
 \description{
 Use the function impute.knn to impute missing values
 }
-\examples{
-x.knn<-use_imputeknn(x) ### x is the list resulted from sample_generator#'
-}

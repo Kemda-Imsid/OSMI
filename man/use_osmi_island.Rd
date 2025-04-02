@@ -10,15 +10,10 @@ use_osmi_island(extendedBetaData, ncores)
 \item{extendedBetaData}{An expression data frame containing CpGs in rows and samples and  CpG position in columns.}
 
 \item{ncores}{Number of system cores to be used}
-
-\item{df_annotation}{A reference data frame containing CpG sites informations}
 }
 \value{
 A data frame with imputation scores
 }
 \description{
 Use OSMI_island to impute missing values at a single and multiple subject levels.
-}
-\examples{
-use_osmi_island(blood_download,4)
 }

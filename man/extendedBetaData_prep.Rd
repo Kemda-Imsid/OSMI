@@ -15,6 +15,3 @@ A list of data frames in which CpGs were grouped depending on their position by 
 \description{
 extendedBetaData_prep splits an expression  data frame over chromosomes information into a list of data frames
 }
-\examples{
-extendedBetaData_prep(extendedBetaData)
-}

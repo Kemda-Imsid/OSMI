@@ -26,9 +26,6 @@ if detectable, kind of imputation (mean or nearest neighbour))
 OSMI imputes missing DNA methylation values of CpGs on a chromosome within the strand.
 It replaces missing values by methylation values of nearest CpGs (in base pairs). It can be applied in single-sample applications.
 }
-\examples{
-OSMI(extendedBetaData, "pos", subData)
-}
 \author{
 author Lutz Leistritz
 }

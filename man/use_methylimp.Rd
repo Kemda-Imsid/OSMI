@@ -15,6 +15,3 @@ A list containing a data frame with records of the imputation, and the execution
 \description{
 Use the function methyLImp to impute missing values
 }
-\examples{
-use_methylimp(x) ### x is the list resulted from sample_generator
-}

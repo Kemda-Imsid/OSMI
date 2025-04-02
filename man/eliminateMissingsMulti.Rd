@@ -23,9 +23,6 @@ matrix may still contain missing values.
 The function applies a greedy algorithm to iteratively delete rows and columns of a matrix that contains missing values
 to generate as large a complete matrix as possible.
 }
-\examples{
-eliminateMissingsMulti(dataFrame,max_cycles=Inf, delete_rows=Inf)
-}
 \author{
 Lutz Leistritz
 Jena University Hospital, Jena, Germany
