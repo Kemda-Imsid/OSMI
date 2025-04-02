@@ -15,7 +15,7 @@ OSMI can be installed using the following code:
 
 ```{r 'install', eval = FALSE}
 
-Prerequists
+pre-requisites
 
 it is recommended to re- install methyLImp
 devtools::install_github("pdilena/methyLImp")
