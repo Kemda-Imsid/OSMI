@@ -26,3 +26,16 @@ Suggests:
     sessioninfo,
     testthat
 VignetteBuilder: knitr
+Imports: 
+    BiocManager,
+    ggplot2,
+    impute,
+    Metrics,
+    minfi,
+    missMethods,
+    parallel,
+    pracma,
+    reshape2,
+    scales,
+    tictoc,
+    utils
