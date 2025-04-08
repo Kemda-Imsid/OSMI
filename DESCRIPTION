@@ -39,4 +39,5 @@ Imports:
     reshape2,
     scales,
     stats,
-    tictoc
+    tictoc,
+    utils
