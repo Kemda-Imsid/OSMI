@@ -29,7 +29,7 @@ devtools::install_github("pdilena/methyLImp")
 ```
 
 ```{r 'install_dev', eval = FALSE}
- ##OSMI installation
+##OSMI installation
 if (!require("remotes", quietly = TRUE))
   install.packages("remotes")
  
@@ -87,16 +87,5 @@ result<-Impact_of_imputation_on_horvath_clock(blood_download, sample_blood_downl
 ## Citation
 
 little by little the bird makes its nest
-
-## Development tools
-
-* The [documentation website](http://Kemda-Imsid.github.io/OSMI) is automatically updated thanks to `r BiocStyle::CRANpkg('pkgdown')`.
-* The code is styled automatically thanks to `r BiocStyle::CRANpkg('styler')`.
-* The documentation is formatted thanks to `r BiocStyle::CRANpkg('devtools')` and `r BiocStyle::CRANpkg('roxygen2')`.
-
-For more details, check the `dev` directory.
-
-This package was developed using `r BiocStyle::Biocpkg('biocthis')`.
-
 
 
