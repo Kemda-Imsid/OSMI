@@ -125,7 +125,7 @@ use_methylimp<-function(datalist=datalist){
 
 
 extendedBetaData_prep<-function(extendedBetaData){
-  df_annotation<-data.frame(minfi::getAnnotation(IlluminaHumanMethylation450kanno.ilmn12.hg19::IlluminaHumanMethylation450kanno.ilmn12.hg19))[,c("chr","strand","Name","pos","Islands_Name")]
+  df_annotation<-data.frame(minfi::getAnnotation("IlluminaHumanMethylation450kanno.ilmn12.hg19"))[,c("chr","strand","Name","pos","Islands_Name")]
   extendedBetaData<- cbind("chr" =  df_annotation$chr[match(rownames(extendedBetaData), df_annotation$Name)],
                      "pos" = df_annotation$pos[match(rownames(extendedBetaData), df_annotation$Name)],
                      "strand" =  df_annotation$strand[match(rownames(extendedBetaData), df_annotation$Name)],extendedBetaData)
@@ -260,7 +260,7 @@ use_osmi<- function(extendedBetaData,subData,df_annotation,ncores){
 
 use_osmi_island<- function(extendedBetaData,ncores){
 
-  df_annotation<-data.frame(minfi::getAnnotation(IlluminaHumanMethylation450kanno.ilmn12.hg19::IlluminaHumanMethylation450kanno.ilmn12.hg19))[,c("chr","strand","Name","pos","Islands_Name")]
+  df_annotation<-data.frame(minfi::getAnnotation("IlluminaHumanMethylation450kanno.ilmn12.hg19"))[,c("chr","strand","Name","pos","Islands_Name")]
   extendedBetaData<-extendedBetaData[!rownames(extendedBetaData)%in%c("sample_id","tissue"),]
   subData <-cbind("chr" =  df_annotation$chr[match(rownames(extendedBetaData), df_annotation$Name)],
                            "pos" = df_annotation$pos[match(rownames(extendedBetaData), df_annotation$Name)],
@@ -336,7 +336,7 @@ use_osmi_island<- function(extendedBetaData,ncores){
 impute_missing_CpGs<-function(extendedBetaData,nRows=nRows,nCols=nCols,
                     nRepeat,ncores){
    print("hi")
-   df_annotation<-data.frame(minfi::getAnnotation(IlluminaHumanMethylation450kanno.ilmn12.hg19::IlluminaHumanMethylation450kanno.ilmn12.hg19))[,c("chr","strand","Name","pos","Islands_Name")]
+   df_annotation<-data.frame(minfi::getAnnotation("IlluminaHumanMethylation450kanno.ilmn12.hg19"))[,c("chr","strand","Name","pos","Islands_Name")]
    extendedBetaData<-extendedBetaData[!rownames(extendedBetaData)%in%c("sample_id","tissue"),]
    subset<-eliminateMissingsMulti(extendedBetaData)
    subset<-extendedBetaData[subset[["rows"]],subset[["cols"]]]
