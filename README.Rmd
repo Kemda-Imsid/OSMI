@@ -8,7 +8,7 @@ output: github_document
  
 The `OSMI` project has been implemented for missing values imputation on expression data set. The advantage of the method is that it can be applied on a single subject DNA-methylation data. The method is based on the localisation of CpGs on chromosomes. Basically it replaces the missing values with its nearest available CpGs value.
 
- 
+  
 ## Installation instructions
  
 OSMI can be installed using the following code:
