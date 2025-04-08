@@ -8,7 +8,6 @@ OSMI can be installed using the following code:
  
 ```{r 'install', eval = FALSE}
 ##pre-requisites
- 
 OSMi required these packages to be available prior insatllation
  
 if (!require("BiocManager", quietly = TRUE)) ##Version>3.19
@@ -30,7 +29,7 @@ devtools::install_github("pdilena/methyLImp")
 ```
 
 ```{r 'install_dev', eval = FALSE}
- 
+ ##OSMI installation
 if (!require("remotes", quietly = TRUE))
   install.packages("remotes")
  
