@@ -7,12 +7,11 @@
 #' OSMI_on_array_density figures out the impact of the density of an methylation array on OSMI imputation.
 #' The denser the array, the should be the performance of OSMI.
 #'
-#' @return A data frame with 2 columns, the rmse of the imputation per samples
+#' @return list containin the result data frame and the plot save in p
 #' and the length of the array used for the imputation
 #' @importFrom minfi getAnnotation
 #' @export
-#' @examples
-#' OSMI_on_array_density(blood_download,4)
+
 
 OSMI_on_array_density<-function (extendedBetaData,ncores = ncores){
   print("Preproccesing started")

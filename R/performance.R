@@ -268,8 +268,7 @@ return(list(p1,p2,p3,p4))
 #'
 #' @return A list of plots
 #' @export
-#'
-#' @examples
+
 perfomance_plot.t<-function(tab_mean=tab_mean){
 
   tab_mean$ID <- factor(rownames(tab_mean))

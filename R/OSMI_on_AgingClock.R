@@ -4,7 +4,7 @@
 #' @param metaData Meta data frame samples informations
 #' @param coefHorvath Horvath reference file
 #'
-#' @return
+#' @return A list of data frame with estimated ages
 #' @export
 #'
 #' @examples
