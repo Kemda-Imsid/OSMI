@@ -17,7 +17,11 @@ OSMI can be installed using the following code:
 
 pre-requisites
 
-it is recommended to re- install methyLImp
+OSMi required this package to be available on insatllation
+
+BiocManager::install("impute", force = TRUE, dependencies=TRUE)
+BiocManager::install("minfi", force = TRUE, dependencies=TRUE)
+BiocManager::install("IlluminaHumanMethylation450kanno.ilmn12.hg19")
 devtools::install_github("pdilena/methyLImp")
 ```
 
