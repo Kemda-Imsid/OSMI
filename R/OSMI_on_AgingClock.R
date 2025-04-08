@@ -9,13 +9,13 @@
 #'
 #' @examples
 #'Impact_of_imputation_on_horvath_clock(extendedBetaData, metaData, coefHorvath)
-#'
+#'s
 Impact_of_imputation_on_horvath_clock<-function(extendedBetaData, metaData, coefHorvath){
 
 
   df_annotation<-data.frame(getAnnotation(IlluminaHumanMethylation450kanno.ilmn12.hg19))[,c("chr","strand","Name","pos","Islands_Name")]
 
-  extendedBetaData <-extendedBetaData_prep(extendedBetaData,df_annotation)
+  extendedBetaData <-extendedBetaData_prep(extendedBetaData)
   if(!is.null(extendedBetaData[[2]])){
     subset<-subset[!rownames(subset)%in%extendedBetaData[[2]],]
   }
