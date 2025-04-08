@@ -28,7 +28,7 @@ BiocManager::install("IlluminaHumanMethylation450kanno.ilmn12.hg19")
 
 devtools::install_github("pdilena/methyLImp")
 ```
-
+ 
 And the development version from [GitHub](https://github.com/Kemda-Imsid/OSMI) with:
 
 ```{r 'install_dev', eval = FALSE}
