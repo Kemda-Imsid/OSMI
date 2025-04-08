@@ -1,27 +1,15 @@
----
-output: github_document
----
- 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
- 
 # OSMI
- 
+
 The `OSMI` project has been implemented for missing values imputation on expression data set. The advantage of the method is that it can be applied on a single subject DNA-methylation data. The method is based on the localisation of CpGs on chromosomes. Basically it replaces the missing values with its nearest available CpGs value.
 
-  
 ## Installation instructions
  
 OSMI can be installed using the following code:
  
 ```{r 'install', eval = FALSE}
+##pre-requisites
  
-
- 
-pre-requisites
- 
-
- 
-OSMi required this package to be available on insatllation
+OSMi required these packages to be available prior insatllation
  
 if (!require("BiocManager", quietly = TRUE)) ##Version>3.19
  
@@ -37,13 +25,10 @@ BiocManager::install("methylclock")
  
 BiocManager::install("IlluminaHumanMethylation450kanno.ilmn12.hg19")
  
-
- 
 devtools::install_github("pdilena/methyLImp")
  
 ```
- 
- 
+
 ```{r 'install_dev', eval = FALSE}
  
 if (!require("remotes", quietly = TRUE))
@@ -51,9 +36,8 @@ if (!require("remotes", quietly = TRUE))
  
 remotes::install_github("Kemda-Imsid/OSMI")
  
-
 library(devtools)
- 
+
 devtools::install_github("Kemda-Imsid/OSMI")
  
 ```
@@ -61,8 +45,8 @@ devtools::install_github("Kemda-Imsid/OSMI")
 ## Example
 
 This is a basic example which shows you how to solve a common problem:
+
 ```{r example, eval = FALSE}
- 
 library("OSMI")
  
 #read the documentation
@@ -71,7 +55,6 @@ library("OSMI")
  
 ### basic example code
 #Eliminate missing values 
- 
 
 eliminateMissingsvalues<-eliminateMissingsMulti(blood_download)
  
@@ -82,7 +65,6 @@ OSMI::impute_missing_CpGs(blood_download,c(400, 1000,3000,5000 ),c(1,2,5,10,50, 
 ### Visualize the results from the imputation
  ###perfomance_check read the results from the results directory and makes ready to visualize
  
-
 OSMI::perfomance_check(c(400, 1000,3000,5000 ),c(1,2,5,10,50, 100, 500, 1000, 1500),10) 
  
 ###perfomance_plot visualize the results
