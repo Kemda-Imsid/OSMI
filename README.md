@@ -18,10 +18,14 @@ OSMI can be installed using the following code:
 pre-requisites
 
 OSMi required this package to be available on insatllation
-
-BiocManager::install("impute", force = TRUE, dependencies=TRUE)
-BiocManager::install("minfi", force = TRUE, dependencies=TRUE)
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("minfi")
+BiocManager::install("impute")
+BiocManager::install("methylclockData")
+BiocManager::install("methylclock")
 BiocManager::install("IlluminaHumanMethylation450kanno.ilmn12.hg19")
+
 devtools::install_github("pdilena/methyLImp")
 ```
 
@@ -31,7 +35,6 @@ And the development version from [GitHub](https://github.com/Kemda-Imsid/OSMI) w
 if (!require("remotes", quietly = TRUE)) install.packages("remotes")
 
 remotes::install_github("Kemda-Imsid/OSMI")
-
 
 library(devtools)
 devtools::install_github("Kemda-Imsid/OSMI")

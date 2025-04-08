@@ -30,6 +30,8 @@ Imports:
     IlluminaHumanMethylation450kanno.ilmn12.hg19,
     impute,
     methods,
+    methylclock,
+    methylclockData,
     methyLImp,
     Metrics,
     minfi,
