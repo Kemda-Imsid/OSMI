@@ -84,8 +84,6 @@ result<-OSMI::OSMI_on_array_density(blood_download,1)
 result<-Impact_of_imputation_on_horvath_clock(blood_download, sample_blood_download, coefHorvath)
  
 ```
-## Citation
 
-little by little the bird makes its nest
 
 
